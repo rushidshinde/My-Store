@@ -1,0 +1,20 @@
+<header>
+  <div class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+      <i class="fa-solid fa-truck-fast fa-2xl ms-5"></i>&nbsp;&nbsp;
+      <strong style="font-size: 30px;"><span class="logo-color">M</span>y<span class="logo-color">S</span>tore</strong>
+      <div>
+        <div class="form-group " role="search">
+          <input class="form-control me-2 mt-1" [(ngModel)] = "searchTerm" (keyup)="search($event)" type="text" placeholder="Search" >
+          <span class="search-icon"><i class="fa-solid fa-magnifying-glass text-primary"></i></span>
+        </div>
+      </div>
+    </div>
+    <button routerLink="cart" class="btn btn-transparent me-5 position-relative border border-0">
+      <i class="fa-solid fa-cart-plus fa-2xl text-light"></i>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        {{totalItem}}
+      </span>
+    </button>
+  </div>
+</header>
